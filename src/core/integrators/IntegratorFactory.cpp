@@ -4,6 +4,8 @@
 #include "progressive_photon_map/ProgressivePhotonMapIntegrator.hpp"
 #include "reversible_jump_mlt/ReversibleJumpMltIntegrator.hpp"
 #include "multiplexed_mlt/MultiplexedMltIntegrator.hpp"
+#include "pf_multiplexed_mlt/PfMultiplexedMltIntegrator.hpp"
+#include "pf_reversible_jump_mlt/PfReversibleJumpMltIntegrator.hpp"
 #include "light_tracer/LightTraceIntegrator.hpp"
 #include "kelemen_mlt/KelemenMltIntegrator.hpp"
 #include "path_tracer/PathTraceIntegrator.hpp"
@@ -20,6 +22,8 @@ DEFINE_STRINGABLE_ENUM(IntegratorFactory, "integrator", ({
     {"kelemen_mlt", std::make_shared<KelemenMltIntegrator>},
     {"multiplexed_mlt", std::make_shared<MultiplexedMltIntegrator>},
     {"reversible_jump_mlt", std::make_shared<ReversibleJumpMltIntegrator>},
+    {"pf_multiplexed_mlt", std::make_shared<PfMultiplexedMltIntegrator>},
+    {"pf_reversible_jump_mlt", std::make_shared<PfReversibleJumpMltIntegrator>},
 }))
 
 }
